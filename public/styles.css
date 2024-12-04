@@ -1,0 +1,266 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffffff, #dbe6f6);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background: linear-gradient(to bottom right, #1a202c, #2d3748);
+  color: #f7fafc;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-toggle button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+body.dark .theme-toggle button {
+  color: #f7fafc;
+}
+
+.theme-toggle button:hover {
+  transform: scale(1.2);
+}
+
+/* Container for content */
+.container {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark .container {
+  background: rgba(26, 32, 44, 0.9);
+  color: #f7fafc;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+#fullPromptInput {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #2a2a72;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Table Styling */
+#keywordTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark #keywordTable {
+  background-color: #2d3748; /* Dark background for dark mode */
+}
+
+#keywordTable th, #keywordTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+body.dark #keywordTable th,
+body.dark #keywordTable td {
+  color: #f7fafc; /* White text in dark mode */
+}
+
+/* Table headers */
+#keywordTable th {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.dark #keywordTable th {
+  background-color: #4A5568; /* Darker header for dark mode */
+}
+
+/* Alternating row colors */
+#keywordTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+body.dark #keywordTable tr:nth-child(even) {
+  background-color: #4A5568; /* Darker even rows */
+}
+
+#keywordTable tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+body.dark #keywordTable tr:hover {
+  background-color: #2d3748; /* Darker row hover */
+}
+
+/* Delete button styling */
+.remove-btn {
+  padding: 8px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Action button container alignment */
+td:last-child {
+  text-align: center;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+body.dark footer {
+  color: #a0aec0;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Container for each keyword row */
+.keyword-row {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff; /* Light color background */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+body.dark .keyword-row {
+  background-color: #2d3748; /* Dark background for keyword rows in dark mode */
+}
+
+/* First line (channel id and name) - medium size and bold */
+.channel-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+body.dark .channel-info {
+  color: #f7fafc; /* White color in dark mode */
+}
+
+/* Second line (destination and prompt) - split half-half */
+.destination-prompt {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+body.dark .destination-prompt {
+  color: #f7fafc; /* White text in dark mode */
+}
+
+/* Delete button - red color, right aligned */
+.delete-btn {
+  align-self: flex-end;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+body.dark .delete-btn {
+  background-color: darkred; /* Darker red in dark mode */
+}
+
+/* Optional: Add hover effect for delete button */
+.delete-btn:hover {
+  background-color: darkred;
+}

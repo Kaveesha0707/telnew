@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyword Manager</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="theme-toggle">
+    <button id="themeToggle">🌙</button>
+  </div>
+  <div class="container">
+    <h1>ChannelManager</h1>
+    <form id="keywordForm">
+      <div class="input-row">
+        <input type="text" id="channelIdInput" placeholder="Enter Channel Id" required />
+        <input type="text" id="channelNameInput" placeholder="Enter Channel Name" required />
+        <input type="text" id="keywordInput" placeholder="Enter Keyword" required />
+        <input type="text" id="destinationInput" placeholder="Enter Destination" required />
+      
+      </div>
+      <textarea id="fullPromptInput" placeholder="Enter Prompt" rows="4" required></textarea>
+      <button type="submit">Add</button>
+    </form>
+    <div id="keywordTable">
+      <!-- Rows will be dynamically added here -->
+    </div>
+  </div>
+  <footer>
+    Made by <a href="https://www.fiverr.com/s/ljLoP8R" target="_blank">szteambots</a>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>
